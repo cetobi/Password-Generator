@@ -3,31 +3,104 @@
     margin: 0;
     padding: 0;
     font-family: system-ui, sans-serif;
-    font-size: 16px;
+    font-size: 18px;
 }
 
 body {
     display: flex;
     flex-direction: column;
+    align-items: center;
     margin: 5vw;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
     align-items: center;
 }
 
-#painelControle{border: 1px solid red;}
-.length {border: 1px solid #000;}
-.checkbox {border: 1px solid #000;}
-
-.strength {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+#exibirSenha {
     border: 1px solid #000;
+    position: relative;
+    width: 100%;
+    padding: 0 2vw;
+    margin: 5px 0;
+    display: flex;
+    align-items: center;
 
-    .lvlStrength {
+    #password {
+        padding: 0 0 0 5px;
+        font-size: 1.3rem;
+    }
+
+    #btnCopy {
+        position: absolute;
+        right: 2vw;
+
+        &:hover {cursor: pointer;}
+    }
+}
+
+#painelControle{
+    border: 1px solid red;
+    padding: 2vw;
+    margin: 0 0 2vw 0;
+    width: 100%;
+
+    .length {
+        border: 1px solid #000;
+        display: flex;
+        justify-content: space-between;
+        padding: 0 5px;
+    }
+
+    #lengthRange {width: 100%;}
+
+    #listCheckbox {
+        border: 1px solid #000;
+        margin: inherit;
+    }
+
+    .strength {
         display: flex;
         flex-direction: row;
-        justify-content: space-around;
+        justify-content: space-between;
+        margin: inherit;
+        padding: 1vw;
         border: 1px solid #000;
+
+        .lvlStrength {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            border: 1px solid #000;
+            width: 50%;
+
+            p {
+                margin: 0 5px 0 3px;
+            }
+
+            .lvlSpan {
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+                width: 100%;
+
+                .lvl {
+                    border: 1px solid #000;
+                    background-color: rgb(255, 183, 49);
+                    width: 12px;
+                    height: 100%;
+                }
+            }
+        }
+    }
+
+    #btnGenerate {
+        width: 100%;
+        padding: 1vw;
+
+        &:hover {cursor: pointer;}
     }
 }
 
