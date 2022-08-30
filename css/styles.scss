@@ -1,3 +1,8 @@
+$background-color: #f9f4ef;
+$app-color: #eaddcf;
+$button-color: #8c7851;
+$text1-color: #716040;
+
 *,*::after,*::before {
     box-sizing: border-box;
     margin: 0;
@@ -11,54 +16,97 @@ body {
     flex-direction: column;
     align-items: center;
     margin: 5vw;
+    background-color: $background-color;
+    color: $text1-color
 }
 
 main {
     display: flex;
     flex-direction: column;
     align-items: center;
+    // width: 25vw;
+
+    h1 {
+        color: $button-color;
+        font-weight: 600;
+    }
 }
 
 #exibirSenha {
-    border: 1px solid #000;
+    background-color: $app-color;
+    color: $app-color;
     position: relative;
     width: 100%;
-    padding: 0 2vw;
-    margin: 5px 0;
+    padding: 1vw;
+    margin: 5px 0 15px 0;
     display: flex;
     align-items: center;
 
     #password {
         padding: 0 0 0 5px;
         font-size: 1.3rem;
+        width: 100%;
+        border: none;
+        background-color: rgba(255, 255, 255, 0);
+        color: $text1-color;
     }
 
     #btnCopy {
         position: absolute;
         right: 2vw;
+        color: $button-color;
+        font-size: 2rem;
+        text-align: center;
+        user-select: none;
 
-        &:hover {cursor: pointer;}
+        &:hover {
+            cursor: pointer;
+            opacity: .5;
+        }
     }
 }
 
 #painelControle{
-    border: 1px solid red;
-    padding: 2vw;
-    margin: 0 0 2vw 0;
+    background-color: $app-color;
+    color: $text1-color;
+    padding: 1vw;
+    margin: 0 0 1vw 0;
     width: 100%;
 
     .length {
-        border: 1px solid #000;
         display: flex;
         justify-content: space-between;
+        align-items: center;
         padding: 0 5px;
+
+        p {font-size: .8rem;}
+
+        #number {
+            color: $button-color;
+            font-weight: 600;
+            font-size: 1.2rem;
+        }
     }
 
-    #lengthRange {width: 100%;}
+    input[type=range] {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 100%;
+        height: .3rem;
+        margin: 0 0 5px 0;
+        border-radius: 5px;
+        background-color: $button-color;
+        outline: none;
+
+        &:hover {cursor: pointer;}
+    }
+    
 
     #listCheckbox {
-        border: 1px solid #000;
         margin: inherit;
+        user-select: none;
+
+        input {margin: 0 1vw;}
     }
 
     .strength {
@@ -67,18 +115,20 @@ main {
         justify-content: space-between;
         margin: inherit;
         padding: 1vw;
-        border: 1px solid #000;
+        background-color: $background-color;
+
+        p {
+            color: $button-color;
+            font-weight: 600;
+        }
 
         .lvlStrength {
             display: flex;
             flex-direction: row;
             justify-content: space-around;
-            border: 1px solid #000;
             width: 50%;
 
-            p {
-                margin: 0 5px 0 3px;
-            }
+            p {margin: 0 1vw;}
 
             .lvlSpan {
                 display: flex;
@@ -87,10 +137,10 @@ main {
                 width: 100%;
 
                 .lvl {
-                    border: 1px solid #000;
                     background-color: rgb(255, 183, 49);
                     width: 12px;
-                    height: 100%;
+                    height: 120%;
+                    border: 1px solid $button-color;
                 }
             }
         }
@@ -99,6 +149,9 @@ main {
     #btnGenerate {
         width: 100%;
         padding: 1vw;
+        background-color: $button-color;
+        border: none;
+        color: $background-color;
 
         &:hover {cursor: pointer;}
     }

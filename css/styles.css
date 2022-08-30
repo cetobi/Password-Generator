@@ -11,6 +11,8 @@ body {
   flex-direction: column;
   align-items: center;
   margin: 5vw;
+  background-color: #f9f4ef;
+  color: #716040;
 }
 
 main {
@@ -18,46 +20,89 @@ main {
   flex-direction: column;
   align-items: center;
 }
+main h1 {
+  color: #8c7851;
+  font-weight: 600;
+}
 
 #exibirSenha {
-  border: 1px solid #000;
+  background-color: #eaddcf;
+  color: #eaddcf;
   position: relative;
   width: 100%;
-  padding: 0 2vw;
-  margin: 5px 0;
+  padding: 1vw;
+  margin: 5px 0 15px 0;
   display: flex;
   align-items: center;
 }
 #exibirSenha #password {
   padding: 0 0 0 5px;
   font-size: 1.3rem;
+  width: 100%;
+  border: none;
+  background-color: rgba(255, 255, 255, 0);
+  color: #716040;
 }
 #exibirSenha #btnCopy {
   position: absolute;
   right: 2vw;
+  color: #8c7851;
+  font-size: 2rem;
+  text-align: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 #exibirSenha #btnCopy:hover {
   cursor: pointer;
+  opacity: 0.5;
 }
 
 #painelControle {
-  border: 1px solid red;
-  padding: 2vw;
-  margin: 0 0 2vw 0;
+  background-color: #eaddcf;
+  color: #716040;
+  padding: 1vw;
+  margin: 0 0 1vw 0;
   width: 100%;
 }
 #painelControle .length {
-  border: 1px solid #000;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 0 5px;
 }
-#painelControle #lengthRange {
+#painelControle .length p {
+  font-size: 0.8rem;
+}
+#painelControle .length #number {
+  color: #8c7851;
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+#painelControle input[type=range] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+       appearance: none;
   width: 100%;
+  height: 0.3rem;
+  margin: 0 0 5px 0;
+  border-radius: 5px;
+  background-color: #8c7851;
+  outline: none;
+}
+#painelControle input[type=range]:hover {
+  cursor: pointer;
 }
 #painelControle #listCheckbox {
-  border: 1px solid #000;
   margin: inherit;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+#painelControle #listCheckbox input {
+  margin: 0 1vw;
 }
 #painelControle .strength {
   display: flex;
@@ -65,17 +110,20 @@ main {
   justify-content: space-between;
   margin: inherit;
   padding: 1vw;
-  border: 1px solid #000;
+  background-color: #f9f4ef;
+}
+#painelControle .strength p {
+  color: #8c7851;
+  font-weight: 600;
 }
 #painelControle .strength .lvlStrength {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  border: 1px solid #000;
   width: 50%;
 }
 #painelControle .strength .lvlStrength p {
-  margin: 0 5px 0 3px;
+  margin: 0 1vw;
 }
 #painelControle .strength .lvlStrength .lvlSpan {
   display: flex;
@@ -84,14 +132,17 @@ main {
   width: 100%;
 }
 #painelControle .strength .lvlStrength .lvlSpan .lvl {
-  border: 1px solid #000;
   background-color: rgb(255, 183, 49);
   width: 12px;
-  height: 100%;
+  height: 120%;
+  border: 1px solid #8c7851;
 }
 #painelControle #btnGenerate {
   width: 100%;
   padding: 1vw;
+  background-color: #8c7851;
+  border: none;
+  color: #f9f4ef;
 }
 #painelControle #btnGenerate:hover {
   cursor: pointer;
