@@ -123,20 +123,19 @@ main h1 {
   justify-content: space-around;
   width: 50%;
 }
-#painelControle .strength .lvlStrength p {
-  margin: 0 1vw;
-}
 #painelControle .strength .lvlStrength .lvlSpan {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  width: 100%;
+  width: 70px;
 }
 #painelControle .strength .lvlStrength .lvlSpan .lvl {
-  background-color: rgb(255, 183, 49);
   width: 12px;
   height: 120%;
   border: 1px solid #8c7851;
+}
+#painelControle .strength .lvlStrength .lvlSpan .expose {
+  background-color: rgb(255, 183, 49);
 }
 #painelControle #btnGenerate {
   width: 100%;

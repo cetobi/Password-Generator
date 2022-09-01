@@ -129,20 +129,22 @@ main {
             justify-content: space-around;
             width: 50%;
 
-            p {margin: 0 1vw;}
+            // p {margin: 0 .2vw;}
 
             .lvlSpan {
                 display: flex;
                 align-items: center;
                 justify-content: space-around;
-                width: 100%;
+                width: 70px;
 
                 .lvl {
-                    background-color: rgb(255, 183, 49);
                     width: 12px;
                     height: 120%;
                     border: 1px solid $button-color;
+
                 }
+
+                .expose {background-color: rgb(255, 183, 49);}
             }
         }
     }
