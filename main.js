@@ -143,6 +143,7 @@ function btnCopy(){
 function difficultPassword(){
     const valueRange = slider.value
     const inputArray = Array.from(document.querySelectorAll('input[type=checkbox]'))
+    const spanLevel = Array.from(document.querySelectorAll('.lvl'))
     let check = 0
 
     for(i=0; i<4; i++){
@@ -154,12 +155,24 @@ function difficultPassword(){
 
     if(check === 4 || check > 1 && valueRange >= 15){
         document.getElementById('difficult').innerHTML = 'HARD'
+        spanLevel.forEach((item) => {
+            item.classList.add('expose')
+        })
     }
     else if(check === 1 || check < 3 && valueRange < 10){
         document.getElementById('difficult').innerHTML = 'EASY'
+        spanLevel.forEach((item) => {
+            item.classList.remove('expose')
+        })
+        spanLevel[0].classList.add('expose')
     }
     else{
         document.getElementById('difficult').innerHTML = 'MEDIUM'
+        spanLevel.forEach((item) => {
+            item.classList.remove('expose')
+        })
+        spanLevel[0].classList.add('expose')
+        spanLevel[1].classList.add('expose')
     }
 }
 
