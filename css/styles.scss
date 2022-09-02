@@ -15,7 +15,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 5vw;
+    margin: 8vw;
     background-color: $background-color;
     color: $text1-color
 }
@@ -157,5 +157,3 @@ main {
         &:hover {cursor: pointer;}
     }
 }
-
-// Responsividade
